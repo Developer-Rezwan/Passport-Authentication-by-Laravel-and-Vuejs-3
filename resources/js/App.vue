@@ -1,7 +1,12 @@
-<template>hello</template>
+<template>
+  <dashboard></dashboard>
+</template>
 
 <script>
-export default {};
+import dashboard from "./components/Dashboard.vue";
+export default {
+  components: { dashboard },
+};
 </script>
 
 <style></style>
