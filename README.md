@@ -27,7 +27,7 @@ $ yarn run watch
 
 I have used Admin LTE-3 . Properly setup the Vuejs with AdminLTE-3 Template.This is ready for now.
 
-## Successfully SweetAlert-2 and Toastr js .
+## Successfully Added SweetAlert-2 and Toastr js .
 
 ```
 Documentation For SweetAlert-2
