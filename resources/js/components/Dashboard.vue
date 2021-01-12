@@ -27,12 +27,28 @@
     <!-- /.container-fluid -->
   </div>
   <!-- /.content -->
+
+  <button @click="toastr">Toastr</button>
+  <button @click="swal">Sweet Alert</button>
 </template>
 
 <script>
 import Breadcrumb from "./sub-components/Breadcrumb.vue";
 export default {
   components: { Breadcrumb },
+  methods: {
+    toastr() {
+      toastr.error("Successsfully Included");
+    },
+    swal() {
+      Swal.fire({
+        title: "Error!",
+        text: "Do you want to continue",
+        icon: "error",
+        confirmButtonText: "Cool",
+      });
+    },
+  },
 };
 </script>
 

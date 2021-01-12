@@ -9,7 +9,7 @@
 <br>
 <p><b>Step:1.</b> To install A fresh laravel with vue-3 . Anyone can clone this repository</p>
 </p>
-
+ 
 ```
 https://github.com/Developer-Rezwan/Point-of-Sales-Application-by-Laravel-and-Vuejs-3
 ```
@@ -26,3 +26,13 @@ $ yarn run watch
 # Admin Template Mastering with Vue component
 
 I have used Admin LTE-3 . Properly setup the Vuejs with AdminLTE-3 Template.This is ready for now.
+
+## Successfully SweetAlert-2 and Toastr js .
+
+```
+Documentation For SweetAlert-2
+https://sweetalert2.github.io/
+
+Documentation For Toastr Js :
+https://codeseven.github.io/toastr/demo.html
+```
