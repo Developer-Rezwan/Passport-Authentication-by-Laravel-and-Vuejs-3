@@ -1,16 +1,17 @@
 require('./bootstrap');
 
 // Vue js implementation
-// Jquery
-import { jQuery } from 'admin-lte/plugins/jquery/jquery.min.js';
+
 import { createApp } from 'vue';
 import App from './App.vue';
 
 createApp(App).mount('#app');
 
 // Templates assets
- window.$ = window.jQuery = jQuery;
-require('admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js');
+// Jquery
+let jQuery = require('jquery');
+window.$ = window.jQuery = jQuery;
+require('bootstrap');
 require('admin-lte/dist/js/adminlte.min.js');
 /* require('admin-lte/plugins/chart.js/Chart.min.js');
 require('admin-lte/plugins/sparklines/sparkline.js');

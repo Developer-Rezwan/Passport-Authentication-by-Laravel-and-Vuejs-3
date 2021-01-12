@@ -1,5 +1,6 @@
-@import "../../node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../../node_modules/admin-lte/dist/css/adminlte.min.css";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700";
 
