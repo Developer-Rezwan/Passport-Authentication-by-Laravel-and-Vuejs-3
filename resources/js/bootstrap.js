@@ -5,10 +5,12 @@ window._ = require('lodash');
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
-
+window.token = localStorage.getItem('AToken') ;
 window.axios = require('axios');
+window.axios.defaults.baseURL = 'http://127.0.0.1:8000/api';
+window.axios.defaults.headers.common['Authorization'] = `Bearer `+token;
+window.axios.defaults.headers.post['Content-Type'] = 'application/json';
 
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

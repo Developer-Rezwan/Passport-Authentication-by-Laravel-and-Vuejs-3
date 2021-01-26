@@ -1,25 +1,25 @@
 <template>
-  <dashboard></dashboard>
-  <button @click="toastr">Toastr</button>
-  <button @click="swal">Sweet Alert</button>
+  <admin v-if="isLoggedIn"></admin>
+  <auth v-else></auth>
 </template>
 
 <script>
-import dashboard from "./components/Dashboard.vue";
+import Admin from "./back-end/Admin.vue";
+import Auth from "./auth/Auth.vue";
+import { onMounted, reactive, ref } from "vue";
+import { useStore } from "vuex";
+
 export default {
-  components: { dashboard },
-  methods: {
-    toastr() {
-      toastr.error("Successsfully Included");
-    },
-    swal() {
-      Swal.fire({
-        title: "Error!",
-        text: "Do you want to continue",
-        icon: "error",
-        confirmButtonText: "Cool",
-      });
-    },
+  components: { Admin, Auth },
+  setup() {
+    const store = useStore();
+    const isLoggedIn = ref(false);
+    const data = reactive({});
+    onMounted(() => {
+      isLoggedIn.value = store.state.auth.isLoggedIn;
+    });
+    // All returned data goes here
+    return { data, isLoggedIn };
   },
 };
 </script>

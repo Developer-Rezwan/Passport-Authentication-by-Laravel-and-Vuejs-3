@@ -1,9 +1,11 @@
-<!-- Navbar -->
+<template>
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+          ><i class="fas fa-bars"></i
+        ></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
@@ -15,7 +17,12 @@
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <input
+          class="form-control form-control-navbar"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
         <div class="input-group-append">
           <button class="btn btn-navbar" type="submit">
             <i class="fas fa-search"></i>
@@ -36,14 +43,22 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{ url('images/user1-128x128.jpg') }}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img
+                src="images/user1-128x128.jpg"
+                alt="User Avatar"
+                class="img-size-50 mr-3 img-circle"
+              />
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                  <span class="float-right text-sm text-danger"
+                    ><i class="fas fa-star"></i
+                  ></span>
                 </h3>
                 <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                <p class="text-sm text-muted">
+                  <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                </p>
               </div>
             </div>
             <!-- Message End -->
@@ -52,14 +67,22 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{url('images/user8-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img
+                src="images/user8-128x128.jpg"
+                alt="User Avatar"
+                class="img-size-50 img-circle mr-3"
+              />
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                  <span class="float-right text-sm text-muted"
+                    ><i class="fas fa-star"></i
+                  ></span>
                 </h3>
                 <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                <p class="text-sm text-muted">
+                  <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                </p>
               </div>
             </div>
             <!-- Message End -->
@@ -68,14 +91,22 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{ url('images/user3-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img
+                src="images/user3-128x128.jpg"
+                alt="User Avatar"
+                class="img-size-50 img-circle mr-3"
+              />
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  <span class="float-right text-sm text-warning"
+                    ><i class="fas fa-star"></i
+                  ></span>
                 </h3>
                 <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                <p class="text-sm text-muted">
+                  <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                </p>
               </div>
             </div>
             <!-- Message End -->
@@ -112,9 +143,24 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button"><i
-            class="fas fa-th-large"></i></a>
+        <a
+          class="nav-link"
+          data-widget="control-sidebar"
+          data-slide="true"
+          href="#"
+          role="button"
+          ><i class="fas fa-th-large"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a href="/logout" class="nav-link"><i class="fas fa-power-off"></i></a>
       </li>
     </ul>
   </nav>
-  <!-- /.navbar -->    
+</template>
+
+<script>
+export default {};
+</script>
+
+<style></style>
