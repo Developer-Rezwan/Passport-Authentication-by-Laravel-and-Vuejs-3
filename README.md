@@ -11,7 +11,7 @@
 </p>
 
 ```
-https://github.com/Developer-Rezwan/Point-of-Sales-Application-by-Laravel-and-Vuejs-3
+https://github.com/Developer-Rezwan/Passport-Authentication-by-Laravel-and-Vuejs-3.git
 ```
 
 <p> <b>Step:2 .</b> Go to the root folder </p>
