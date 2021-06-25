@@ -43,7 +43,11 @@
               <div class="row">
                 <div class="col-8">
                   <div class="icheck-primary">
-                    <input type="checkbox" id="remember" v-model="state.form.remember" />
+                    <input
+                      type="checkbox"
+                      id="remember"
+                      v-model="state.form.remember"
+                    />
                     <label for="remember"> Remember Me </label>
                   </div>
                 </div>
@@ -84,14 +88,11 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted } from "vue";
-import { useRoute, useRouter } from "vue-router";
-//import { useStore } from "vuex";
+import { ref, reactive } from "vue";
+import { useStore } from "vuex";
 export default {
   setup() {
-    //const store = useStore();
-    const router = useRouter();
-    const route = useRoute();
+    const store = useStore();
     const isLoading = ref(false);
     const state = reactive({
       form: {
@@ -100,18 +101,15 @@ export default {
       },
       errors: "",
     });
-    const submit = async () => {
+    const submit = () => {
       isLoading.value = true;
-      const { data } = await axios.post("/login", state.form);
-      localStorage.setItem("AToken", data);
-      isLoading.value = false;
-    };
-    onMounted(() => {
-      router.beforeEach((to, from) => {
-        console.log(to);
-        console.log(from);
+      axios.post("/login", state.form).then((res) => {
+        localStorage.setItem("AToken", res.data);
+        isLoading.value = false;
+        store.commit("setIsLoggedIn");
+        window.location.href = "/dashboard";
       });
-    });
+    };
     /* return all the data and functions for the template */
     return { state, submit, isLoading };
   },

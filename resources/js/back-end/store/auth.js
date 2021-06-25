@@ -1,11 +1,11 @@
 export const auth = {
    state: {
-      isLoggedIn: false ,
-      user : ""   
+      isLoggedIn: localStorage.getItem('AToken') ? true:false ,
+      user : ""
  },
    mutations: {
-      setIsLoggedIn(state , payload) {
-         state.isLoggedIn = payload;
+       setIsLoggedIn(state) {
+        state.isLoggedIn = true;
       },
       setUser(state , payload) {
          state.user = payload;

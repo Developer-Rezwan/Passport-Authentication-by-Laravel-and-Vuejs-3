@@ -14,12 +14,12 @@ export default {
   setup() {
     const store = useStore();
     const isLoggedIn = ref(false);
-    const data = reactive({});
     onMounted(() => {
-      isLoggedIn.value = store.state.auth.isLoggedIn;
+      if (localStorage.getItem("AToken"))
+        isLoggedIn.value = store.state.auth.isLoggedIn;
     });
     // All returned data goes here
-    return { data, isLoggedIn };
+    return { isLoggedIn };
   },
 };
 </script>

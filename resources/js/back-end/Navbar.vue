@@ -139,7 +139,9 @@
             <span class="float-right text-muted text-sm">2 days</span>
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          <a href="#" class="dropdown-item dropdown-footer"
+            >See All Notifications</a
+          >
         </div>
       </li>
       <li class="nav-item">
@@ -153,14 +155,24 @@
         ></a>
       </li>
       <li class="nav-item">
-        <a href="/logout" class="nav-link"><i class="fas fa-power-off"></i></a>
+        <a @click="logout()" class="nav-link cursor"
+          ><i class="fas fa-power-off"></i
+        ></a>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    const logout = () => {
+      localStorage.removeItem("AToken");
+      window.location.href = "/login";
+    };
+    return { logout };
+  },
+};
 </script>
 
 <style></style>
